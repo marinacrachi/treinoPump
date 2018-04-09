@@ -14,11 +14,13 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RecordsPage {
 
+  records: Array<{nome: string, tipo: string, level: number, pontuacao: number}> = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecordsPage');
   }
-
+ 
 }

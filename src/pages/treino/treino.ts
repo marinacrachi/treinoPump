@@ -20,7 +20,7 @@ export class TreinoPage {
     {nome: "Bang Bang Bang", tipo: "D", level: 20} 
   ];
 
-  musicaObj ={nome:'', tipo:'', level:0}
+  musicaObj ={nome:'', tipo:'', level: null}
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -28,18 +28,15 @@ export class TreinoPage {
   }
 
   adicionaMusicas(){
-    console.log("entrou em adiciona musicas")
     this.musicas.push({
       nome: this.musicaObj.nome,
       tipo: this.musicaObj.tipo,
       level: this.musicaObj.level
     })
-    console.log(this.musicaObj)
-    console.log(JSON.stringify(this.musicas))
   }
 
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad TreinoPage');
-  // }
+  removeMusica(event,nome){
+    console.log("Removeu música: " + nome)
+  }
 
 }
